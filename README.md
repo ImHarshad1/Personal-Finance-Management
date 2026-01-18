@@ -63,9 +63,13 @@ The project follows a **multi-layered architecture** ensuring separation of conc
 ```
 
 ## ⭐ Support 
+
 If you like my work: 
+
 ⭐ Star my repositories 
+
 🍴 Fork them 
+
 🛠 Submit pull requests 
 
 ---
