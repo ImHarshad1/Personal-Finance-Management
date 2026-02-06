@@ -1,0 +1,76 @@
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ===============================
+# Sensitive Configuration Files
+# ===============================
+# Environment variables
+.env
+
+# ===============================
+# Build & Target Files
+# ===============================
+
+/target/
+/build/
+
+# ===============================
+# Logs
+# ===============================
+
+*.log
+
+# ===============================
+# IDE / OS Files
+# ===============================
+
+# Eclipse / STS
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Mac / Windows
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Maven Wrapper
+# ===============================
+
+.mvn/wrapper/maven-wrapper.jar
+
+# ===============================
+# Test Reports
+# ===============================
+
+/surefire-reports/
+/failsafe-reports/

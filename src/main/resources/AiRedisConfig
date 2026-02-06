@@ -1,0 +1,28 @@
+A) Redis + Docker + Spring Cache (team guide)
+1) Start Redis (Docker)
+Open terminal:
+
+docker run -d --name redis-cache -p 6379:6379 redis:latest
+
+Next time onwards:
+docker start redis-cache
+
+Check running:
+docker ps
+
+Test Redis:docker exec -it redis-cache redis-cli
+Expected: PONG
+
+Output must be:
+PONG
+
+Exit:
+exit
+
+✅ Redis is now running on localhost:6379.
+
+2) Spring setup (very short)
+
+Add Redis + Cache dependency (2 lines in pom).
+In application.properties put redis host/port + ttl (10m).
+Add @EnableCaching in main app OR config class.

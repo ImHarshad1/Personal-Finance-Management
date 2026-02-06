@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OTP Verification</title>
+</head>
+
+<body style="
+    margin:0;
+    padding:0;
+    background:#f1f5f9;
+    font-family:'Segoe UI', Arial, sans-serif;
+">
+
+<div style="
+    max-width:520px;
+    margin:40px auto;
+    background:#ffffff;
+    padding:28px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 14px 35px rgba(0,0,0,0.12);
+">
+
+    <!-- Header -->
+    <div style="
+        background:linear-gradient(135deg,#2563eb,#1e3a8a);
+        color:#ffffff;
+        padding:16px;
+        border-radius:12px;
+        font-size:20px;
+        font-weight:700;
+        margin-bottom:24px;
+    ">
+        🔐 OTP Verification
+    </div>
+
+    <!-- Content -->
+    <p style="font-size:15px;color:#334155;margin:0 0 12px;">
+        Hello <b style="color:#1e3a8a;">{{name}}</b>,
+    </p>
+
+    <p style="font-size:15px;color:#475569;margin:0 0 20px;">
+        Your One-Time Password (OTP) for password reset is:
+    </p>
+
+    <!-- OTP Box -->
+    <div style="
+        display:inline-block;
+        background:#f8fafc;
+        border:2px dashed #2563eb;
+        border-radius:14px;
+        padding:16px 28px;
+        margin:12px 0 18px;
+    ">
+        <span style="
+            font-size:28px;
+            font-weight:700;
+            letter-spacing:4px;
+            color:#1e3a8a;
+        ">
+            {{otp}}
+        </span>
+    </div>
+
+    <p style="
+        font-size:13.5px;
+        color:#dc2626;
+        font-weight:600;
+        margin:12px 0 18px;
+    ">
+        ⏳ Valid for 2 minutes only
+    </p>
+
+    <!-- Warning -->
+    <div style="
+        background:#fff1f2;
+        border-left:4px solid #dc2626;
+        padding:12px 14px;
+        border-radius:10px;
+        font-size:13px;
+        color:#7f1d1d;
+        margin-bottom:22px;
+        text-align:left;
+    ">
+        If you didn’t request this password reset, please ignore this email.
+        Your account remains secure.
+    </div>
+
+    <!-- Footer -->
+    <p style="font-size:13px;color:#64748b;margin:0;">
+        Regards,<br>
+        <strong style="color:#1e3a8a;">Personal Finance Management Team</strong>
+    </p>
+
+</div>
+
+</body>
+</html>

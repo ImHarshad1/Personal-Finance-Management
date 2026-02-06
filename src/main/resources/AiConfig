@@ -1,0 +1,31 @@
+0) Prerequisites (must have)
+
+*Java 17
+*Maven
+*Spring Boot 3.2.x (you already moved to 3.2.2 ✅)
+
+1) Install Ollama (local AI runtime)
+
+*Windows:- 
+Download Ollama from the official website:
+	https://ollama.com/download
+
+*Restart system once (recommended).
+
+*Mac:-
+Install from the same link OR with Homebrew:
+	brew install ollama
+
+3) Download the model (llama3.1:8b)
+
+*Run:
+	 ollama pull llama3.1:8b
+ 
+*Check installed models:
+	ollama list
+
+*Quick test:
+	ollama run llama3.2
+
+Type: hello → it should reply.
+
