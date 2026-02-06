@@ -23,6 +23,22 @@ This project focuses on **real-world backend practices**: authentication, cachin
 - **Google OAuth2 login** (Sign in with Google)
 - Secure user session handling
 
+### 📊 Interactive Dashboard (4 Charts)
+- **Category-wise Expense (Pie)**
+- **Income vs Expense (Bar)**
+- **Expense Trend (Line)**
+- **Budget vs Actual Expense (Bar)**
+✅ Charts auto-update based on the **current month** data.
+
+### 🤖 AI Finance Assistant (Streaming)
+- AI chat assistant that answers based on your **actual finance data**
+- Supports queries like:
+  - “What are my expenses this month?”
+  - “Show budget status (within/over)”
+  - “Explain my charts”
+  - “How can I save money?”
+- Uses **Server-Sent Events (SSE)** for **streaming responses** (live typing)
+
 ### 💰 Transactions (Income & Expense)
 - Add income/expense transactions with categories
 - **Edit / Delete transactions**
@@ -33,13 +49,6 @@ This project focuses on **real-world backend practices**: authentication, cachin
   - Category
   - Date range
 
-### 📊 Interactive Dashboard (4 Charts)
-- **Category-wise Expense (Pie)**
-- **Income vs Expense (Bar)**
-- **Expense Trend (Line)**
-- **Budget vs Actual Expense (Bar)**
-✅ Charts auto-update based on the **current month** data.
-
 ### 🧾 Budget Module
 - Set monthly budgets category-wise
 - Track **Budget vs Actual** spending
@@ -48,15 +57,6 @@ This project focuses on **real-world backend practices**: authentication, cachin
 ### 📄 Reports
 - Generate and download **PDF reports** (monthly finance report)
 - Useful for sharing or maintaining records
-
-### 🤖 AI Finance Assistant (Streaming)
-- AI chat assistant that answers based on your **actual finance data**
-- Supports queries like:
-  - “What are my expenses this month?”
-  - “Show budget status (within/over)”
-  - “Explain my charts”
-  - “How can I save money?”
-- Uses **Server-Sent Events (SSE)** for **streaming responses** (live typing)
 
 ### ⚡ Performance Optimization (Redis Cache)
 - Finance summaries cached per user + month using **Redis**
@@ -93,19 +93,17 @@ The project follows a **layered architecture**:
 ### 🔁 Flow (High Level)
 
 ```text
-Client (JSP UI)
-   ↓
-Spring MVC Controllers
-   ↓
-Service Layer (Business Logic)
-   ↓
-Repository Layer (Spring Data JPA)
-   ↓
-PostgreSQL Database
-   ↓
-Redis Cache (for computed finance summary)
-   ↓
-AI Assistant (Spring AI + streaming SSE)
++-------------------+   +-------------------------+   +--------------------------+   +--------------------+
+|   Client (JSP UI) | → |       Controllers       | → |       Service Layer      | → |  Repository Layer  |
+|   (Web Interface) |   |   (Request Handling)    |   |     (Business Logic)     |   | (Spring Data JPA)  |
++-------------------+   +-------------------------+   +--------------------------+   +--------------------+
+                                                                                       |
+                                                                                       v
++-------------------+   +----------------------------+  +---------------------------+   +----------------------------+
+|   PostgreSQL DB   | ← | Entity Layer (DB Mapping) | ← |        Redis Cache        | ← | AI Assistant (Spring AI +  |
+| (Persistent Data) |   |   (Hibernate / JPA)       |   | (Computed Summary Storage)|   |  Streaming SSE Responses)  |
++-------------------+   +----------------------------+  +---------------------------+   +----------------------------+
+
 ```
 ---
 
